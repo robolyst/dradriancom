@@ -20,7 +20,7 @@ h1, h2 {
 
 h2 {
 	font-weight: bold;
-	font-size: 30px;
+	font-size: 48px;
 }
 
 h2 .heart {
@@ -72,7 +72,7 @@ h2 .heart {
 	padding: 100px;
 	font-weight: 300;
 	font-style: normal;
-	font-size: 26px;
+	font-size: 36px;
 }
 
 .iluvdata .left p {
@@ -163,4 +163,43 @@ h2 .heart {
 
 .footer .contact a:hover {
 	text-decoration: underline;
+}
+
+.cv {
+	background-color: #F5F8F9;
+	position: relative;
+	overflow: hidden;
+	font-size: 18px;
+}
+
+.cv .container {
+	max-width: 850px;
+}
+
+.cv .columns {
+	margin-bottom: 50px;
+}
+
+.cv h2 {
+	text-align: center;
+	padding: 50px;
+	color: #6A94A2;
+}
+
+.cv .left {
+	text-align: center;
+	line-height: 1.75;
+	color: #ACAEAE;
+}
+
+.cv .jobtitle {
+	font-weight: bold;
+}
+
+.cv .time {
+	color: #7A7676;
+}
+
+.cv .right p {
+	padding-top: 20px;
 }
