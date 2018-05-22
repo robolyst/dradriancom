@@ -1,8 +1,13 @@
 @import "assets/bulma.css";
-@import url('https://fonts.googleapis.com/css?family=PT+Serif');
+@import url('https://fonts.googleapis.com/css?family=PT+Serif:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
 
 .hero {
-	background: url('assets/images/hero.png') no-repeat center center fixed;
+	background: url('assets/images/hero.png') no-repeat center center;
 	-webkit-background-size: contain;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -11,6 +16,15 @@
 
 h1, h2 {
 	font-family: 'PT Serif', serif;
+}
+
+h2 {
+	font-weight: bold;
+	font-size: 30px;
+}
+
+h2 .heart {
+	color: #FF0707;
 }
 
 .hero h1 {
@@ -51,4 +65,22 @@ h1, h2 {
 
 .hero .social.aboutme {
 	background-image: url('assets/images/aboutme-dark.png');
+}
+
+.iluvdata .left {
+	background-color: #FFFBFB;
+	padding: 100px;
+	font-weight: 300;
+	font-style: normal;
+	font-size: 26px;
+}
+
+.iluvdata .left p {
+	margin-top: 40px;
+}
+
+.iluvdata .right {
+	background-color: #FD3B56;
+	max-height: 100%;
+	padding: 0;
 }
