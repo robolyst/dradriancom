@@ -91,6 +91,10 @@ transform: translate(-0px, -4px)
 	background-image: url('assets/images/aboutme-dark.png');
 }
 
+.columns {
+	margin: 0;
+}
+
 .iluvdata .left {
 	background-color: #FFFBFB;
 	padding: 100px;
@@ -107,6 +111,14 @@ transform: translate(-0px, -4px)
 	background-color: #FD3B56;
 	max-height: 100%;
 	padding: 0;
+	background-image: url(assets/images/IPhone.png);
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	min-height: 500px;
 }
 
 .footer {
