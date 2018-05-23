@@ -43,6 +43,10 @@ a {
 	color: #2F80ED;
 }
 
+.hero .hero-head {
+	padding: 1.5rem;
+}
+
 
 .hero .navbar {
 	display: block;
@@ -57,9 +61,17 @@ a {
 	background-repeat: no-repeat;
 	background-position: center center;
 	display: inline-block;
-	width: 40px;
-	height: 40px;
-	margin:20px;
+	width: 30px;
+	height: 30px;
+	margin-left: 30px;
+}
+
+.hero .social:hover {
+	-moz-transform: translate(-0px, -4px);
+-ms-transform: translate(-0px, -4px);
+-o-transform: translate(-0px, -4px);
+-webkit-transform: translate(-0px, -4px);
+transform: translate(-0px, -4px)
 }
 
 .hero .social.twitter {
