@@ -95,6 +95,10 @@ transform: translate(-0px, -4px)
 	margin: 0;
 }
 
+.column {
+	overflow: hidden;
+}
+
 .iluvdata .left {
 	background-color: #FFFBFB;
 	padding: 100px;
@@ -249,6 +253,15 @@ transform: translate(-0px, -4px)
 .things h2 {
 	text-align: center;
 	padding: 100px;
+	padding-bottom: 90px;
+}
+
+.things h3 {
+	margin-top: 20px;
+}
+
+.things h3.notop {
+	margin-top: 0px;
 }
 
 .tile.is-parent {
@@ -271,7 +284,12 @@ transform: translate(-0px, -4px)
 
 .things .tile.is-child.thing p {
 	font-size: 18px;
-	margin-top: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.photorow {
+	display: flex;
 }
 
 .coventryimage {
@@ -281,16 +299,17 @@ transform: translate(-0px, -4px)
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
-	width: 200px;
-	height: 200px;
-	display: inline-block;
-	float: right;
 	margin: 0;
 	padding: 0;
+	flex-grow: 1;
 }
 
-.coventryimage.two {
-	height: 400px;
+/* Make the photos square */
+.coventryimage:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+    float: left;
 }
 
 .shortertitlesmedia {
@@ -312,11 +331,17 @@ transform: translate(-0px, -4px)
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
-	width: 154.25px;
-	height: 125.33px;
-	display: inline-block;
 	margin: 0;
 	padding: 0;
+	flex-grow: 1;
+}
+
+/* Make the photos square */
+.summerschoolthumb:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+    float: left;
 }
 
 .christmaslecturethumb {
@@ -326,9 +351,15 @@ transform: translate(-0px, -4px)
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
-	width: 200px;
-	height: 200px;
-	display: inline-block;
 	margin: 0;
 	padding: 0;
+	flex-grow: 1;
+}
+
+/* Make the photos square */
+.christmaslecturethumb:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+    float: left;
 }
