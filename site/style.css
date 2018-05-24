@@ -99,16 +99,24 @@ a {
 	overflow: hidden;
 }
 
+@media screen and (min-width: 769px), print {
+  .iluvdata .columns .left:not(.is-desktop) {
+    padding: 100px;
+		font-size: 36px;
+  }
+}
+
 .iluvdata .left {
 	background-color: #FFFBFB;
-	padding: 100px;
 	font-weight: 300;
 	font-style: normal;
-	font-size: 36px;
+	font-size: 28px;
+	padding: 30px;
 }
 
 .iluvdata .left p {
-	margin-top: 40px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 .iluvdata .right {
@@ -188,7 +196,13 @@ a {
 	color: white;
 	text-align: center;
 	font-size: 22px;
-	padding: 100px;
+	padding: 50px;
+}
+
+@media screen and (min-width: 769px), print {
+  .footer .contact:not(.is-desktop) {
+		padding: 100px;
+  }
 }
 
 .footer .contact h2 {
@@ -232,6 +246,13 @@ a {
 	text-align: center;
 	padding: 50px;
 	color: #6A94A2;
+	font-size:36px;
+}
+
+@media screen and (min-width: 769px), print {
+  .cv h2:not(.is-desktop) {
+		font-size: 42px;
+  }
 }
 
 .cv .left {
@@ -260,8 +281,15 @@ a {
 
 .things h2 {
 	text-align: center;
-	padding: 100px;
-	padding-bottom: 90px;
+	padding: 50px;
+	padding-bottom: 40px;
+}
+
+@media screen and (min-width: 769px), print {
+  .things h2:not(.is-desktop) {
+		padding: 100px;
+		padding-bottom: 90px;
+  }
 }
 
 .things h3 {
