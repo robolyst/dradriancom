@@ -242,16 +242,15 @@ a {
 	margin-bottom: 50px;
 }
 
+
 .cv h2 {
 	text-align: center;
 	padding: 50px;
-	color: #6A94A2;
-	font-size:36px;
 }
 
 @media screen and (min-width: 769px), print {
   .cv h2:not(.is-desktop) {
-		font-size: 42px;
+		padding: 100px;
   }
 }
 
