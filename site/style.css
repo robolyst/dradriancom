@@ -102,7 +102,7 @@ a {
 @media screen and (min-width: 769px), print {
   .iluvdata .columns .left:not(.is-desktop) {
     padding: 100px;
-		font-size: 36px;
+		font-size: 32px;
   }
 }
 
