@@ -12,3 +12,8 @@ docker-compose run build
 The site will be built into index.html
 
 Docs for the static site generator: http://staticjinja.readthedocs.io/en/latest/
+
+Deploy project:
+```shell
+vercel
+```

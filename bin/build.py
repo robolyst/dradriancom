@@ -6,7 +6,7 @@ if __name__ == "__main__":
 
     site = make_site(
         searchpath="/app/src/templates",
-        outpath="/app/",
+        outpath="/app/src/",
         env_globals=json.load(open('/app/src/data.json')),
     )
 
