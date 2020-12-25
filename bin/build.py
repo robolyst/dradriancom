@@ -5,9 +5,9 @@ import json
 if __name__ == "__main__":
 
     site = make_site(
-        searchpath="site/templates",
-        outpath="site/",
-        env_globals=json.load(open('site/data.json')),
+        searchpath="/app/src/templates",
+        outpath="/app/",
+        env_globals=json.load(open('/app/src/data.json')),
     )
 
     # enable automatic reloading
