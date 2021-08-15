@@ -1,0 +1,15 @@
+{{ define "main" }}
+
+    <div id="section" class="container">
+        {{ .Content }}
+
+        {{ range (sort .Pages) }}
+            <div class="post">
+                <a class="title" href="{{ .Permalink }}">{{ .Title }}</a>
+                <div class="date">{{ .Date.Format "2 January 2006" }}</div>
+                <div class="blurb">{{ .Params.blurb }}</div>
+            </div>
+        {{ end }}
+    </div>
+
+{{ end }}
