@@ -3,7 +3,7 @@ chapter: 1
 title: "Visual style guide"
 blurb: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer odio neque, volutpat vel nunc ut."
 
-date: "2021-05-06"
+date: "1900-01-01"
 type: article
 katex: true
 bokeh: true

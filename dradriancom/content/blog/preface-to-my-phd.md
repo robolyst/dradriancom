@@ -1,6 +1,6 @@
 ---
 title: "Preface to my Ph.D"
-blurb: "I wrote a story as the preface to my Ph.D to honour my parents and the brave choices they made in raising me and my sibblings."
+blurb: "When writing a Ph.D, it is customary to write an acknowledgements page that thanks people who helped. I wrote a story as the preface to my Ph.D to thank the people who helped me."
 
 date: "2013-05-10"
 type: article
