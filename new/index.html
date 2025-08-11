@@ -98,7 +98,7 @@
         h1 {
             font-size: 1.8rem;
             font-weight: 700;
-            margin-top: 5rem;
+            margin-top: 6rem;
         }
 
         h2 {
@@ -106,6 +106,44 @@
             font-weight: 600;
             margin-top: 2rem;
         }
+
+        img.company {
+            max-height: 50px;
+            max-width: 200px;
+
+            -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+            filter: grayscale(100%);
+        }
+
+        img.company:hover {
+            -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+            filter: grayscale(0%);
+        }
+
+        .companies {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-items: center;
+            align-items: center;
+            grid-gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        @media(max-width:700px){
+            .companies {
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 4rem 2rem;
+            }
+        }
+
+        .companies a img {
+            transition: transform 0.3s ease;
+        }
+
+        .companies a img:hover {
+            transform: scale(1.2);
+        }
+    
     </style>
 </head>
 
@@ -114,9 +152,9 @@
         <name>Adrian Letchford</name>
         <job>Quantitative Developer & Data Engineer</job>
         <div class="links">
-            <a href="" target="_blank" rel="noopener"><img src="x.svg" /></a>
-            <a href="" target="_blank" rel="noopener"><img src="linkedin.svg" /></a>
-            <a href="" target="_blank" rel="noopener"><img src="github.svg" /></a>
+            <a href="https://x.com/DrAdrian" target="_blank" rel="noopener"><img src="x.svg" /></a>
+            <a href="https://www.linkedin.com/in/adrianletchford/" target="_blank" rel="noopener"><img src="linkedin.svg" /></a>
+            <a href="https://github.com/robolyst" target="_blank" rel="noopener"><img src="github.svg" /></a>
         </div>
     </div>
     <div class="container">
@@ -146,6 +184,16 @@
             topics, I care about doing work that's both technically strong and human-centred.
         </p>
 
+        <div class="companies">
+            <a href="https://www.linkedin.com/in/adrianletchford/"><img src="company-logos/millennium.svg" class="company" /></a>
+            <a href="https://www.linkedin.com/in/adrianletchford/"><img src="company-logos/lick.svg"  style="max-height: 30px;" class="company" /></a>
+            <a href="https://www.linkedin.com/in/adrianletchford/"><img src="company-logos/akuna.png" style="max-height: 100px;" class="company" /></a>
+            <a href="https://www.linkedin.com/in/adrianletchford/"><img src="company-logos/mathspace.svg" class="company" /></a>
+            <a href="https://www.linkedin.com/in/adrianletchford/"><img src="company-logos/usyd.svg" class="company" /></a>
+            <a href="https://www.linkedin.com/in/adrianletchford/"><img src="company-logos/wbs.svg" class="company" /></a>
+            <a href="https://www.linkedin.com/in/adrianletchford/"><img src="company-logos/anu.svg" class="company" /></a>
+        </div>
+    
         <h1>Public projects</h1>
 
         <h2>Open Source Quant</h2>
