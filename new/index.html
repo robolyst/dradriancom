@@ -214,6 +214,20 @@
         li:not(:last-child) { 
             margin-bottom: 1.5rem;  
         }
+
+        .media_links a {
+            display: inline-block;
+            margin-right: 2rem;
+            margin-bottom: 2rem;
+            max-height: 5rem;
+            opacity: 0.5;
+            transition: transform 0.3s ease;
+        }
+
+        .media_links a:hover {
+            opacity: 1;
+            transform: scale(1.2);
+        }
             
     </style>
 </head>
@@ -240,7 +254,7 @@
         <p>
             I'm a quantitative developer and data scientist with over a decade of experience
             solving hard problems with technology. My career has taken me from academia, to
-            technology startups, and into finance — giving me a rare mix of research depth,
+            technology startups, and into finance - giving me a rare mix of research depth,
             product focus, and market experience.
         </p>
 
@@ -306,6 +320,11 @@
 
         <ul>
             <li>
+                <tag>software</tag>
+                <a href="https://github.com/robolyst/ibportal">ibportal</a> (2022) A Dockerized version of Interactive
+                Brokers' REST API Web Gate.
+            </li>
+            <li>
                 <tag>video</tag>
                 <a href="https://www.youtube.com/watch?v=zFdzioMr40Y">Airtasker: Meet "Carl!" The AI Classifier!</a> 2018.<br />
                 I talked to Amazon Web Services about Carl, one of the awesome machine learning tools that we built at Airtasker.
@@ -313,8 +332,8 @@
             </li>
             <li>
                 <tag>website</tag>
-                2016. A series of data visualisations illustrating the City of Coventry.
-                <a href="http://www.coventryindata.com">CoventryInData.com</a>
+                <a href="http://www.coventryindata.com">CoventryInData.com</a> 2016. A series of data visualisations
+                illustrating the City of Coventry.
             </li>
             <li>
                 <tag>paper</tag>
@@ -353,6 +372,14 @@
                 Adrian Letchford, Helen Susanna Moat and Tobias Preis. 2015.
                 <a href="https://doi.org/10.1098/rsos.150266">The advantage of short paper titles.</a>
                 <i>Royal Society Open Science</i> <b>10:</b> 2150266.
+                <p>The paper was written about by:</p>
+                <div class="media_links">
+                    <a href="http://news.sciencemag.org/scientific-community/2015/08/brief-papers-shorter-titles-get-more-citations-study-suggests" target="_blank"><img src="company-logos/science.png"></a>
+                    <a href="http://www.nature.com/news/papers-with-shorter-titles-get-more-citations-1.18246" target="_blank"><img src="company-logos/nature.png"></a>
+                    <a href="http://www.thetimes.co.uk/tto/science/article4548298.ece" target="_blank"><img src="company-logos/the_times.png"></a>
+                    <a href="http://www.dailymail.co.uk/news/article-3223513/Is-science-hard-scientists-Experts-worry-academic-papers-unintelligible-NO-ONE-read-them.html" target="_blank"><img src="company-logos/daily_mail.png"></a>
+                    <a href="http://www.scientificamerican.com/podcast/episode/terse-titles-cited/" target="_blank"><img src="company-logos/scientific_american.png"></a>
+                </div>
             </li>
             <li>
                <tag>paper</tag>
