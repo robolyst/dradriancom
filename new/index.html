@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Adrian Letchford</title>
+	<style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+        body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            background-color: #f9f9f9;
+            font-family: "Montserrat", sans-serif;
+            background-color: #FBFBFB;
+            text-align: center;
+            margin: 0;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        /* Fluid base font-size scaling:
+        This scales the base font-size from 12px (on very small screens)
+        up to 20px (on larger screens), with a linear interpolation in between.
+        All typography defined in rem units will scale together.
+        
+        I shamelessly stole this from benletchford.com. Hi Ben! */
+        :root {
+            font-size: clamp(12px, calc(12px + 4 * ((100vw - 320px) / 680)), 20px);
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        /* Splash container styles */
+        .container.splash {
+            height: 80vh;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        name {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        job {
+            font-size: 1.5rem;
+            font-weight: 200;
+            margin-bottom: 1.5rem;
+        }
+
+        .links {
+            margin-top: 3rem;
+        }
+
+        .links img {
+            width: 2rem;
+            height: 2rem;
+            margin: 0 0.5rem;
+        }
+
+        quote {
+            font-size: 1.2rem;
+            font-weight: 100;
+            font-style: italic;
+            line-height: 1.5;
+
+            display: block;
+            padding-left: 5rem;
+            padding-right: 5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container splash">
+        <name>Adrian Letchford</name>
+        <job>Quantitative Developer & Data Engineer</job>
+        <div class="links">
+            <a href="" target="_blank" rel="noopener"><img src="x.svg" /></a>
+            <a href="" target="_blank" rel="noopener"><img src="linkedin.svg" /></a>
+            <a href="" target="_blank" rel="noopener"><img src="github.svg" /></a>
+        </div>
+    </div>
+    <div class="container">
+        <quote>"I solve hard problems with technology, drawing on 12+ years of experience across academia, tech startups, and finance."</quote>
+    </div>
+</body>
+
+</html>
