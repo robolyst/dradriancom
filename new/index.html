@@ -35,6 +35,8 @@
             font-size: clamp(12px, calc(12px + 4 * ((100vw - 320px) / 680)), 20px);
         }
 
+        /* Container styles */
+
         .container {
             max-width: 800px;
             width: 100%;
@@ -45,7 +47,6 @@
             width: 100%;
         }
 
-        /* Splash container styles */
         .container.splash {
             height: 80vh;
 
@@ -56,6 +57,7 @@
             text-align: center;
         }
 
+        /* Splash styles */
         name {
             font-size: 3.5rem;
             font-weight: 700;
@@ -148,6 +150,15 @@
 
         .companies a img:hover {
             transform: scale(1.2);
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
 
         .footer {
