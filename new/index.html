@@ -40,6 +40,11 @@
             width: 100%;
         }
 
+        .container.wide {
+            max-width: 1200px;
+            width: 100%;
+        }
+
         /* Splash container styles */
         .container.splash {
             height: 80vh;
@@ -99,12 +104,13 @@
             font-size: 1.8rem;
             font-weight: 700;
             margin-top: 6rem;
+            text-align: center;
         }
 
         h2 {
             font-size: 1.25rem;
             font-weight: 600;
-            margin-top: 2rem;
+            margin-top: 1rem;
         }
 
         img.company {
@@ -165,6 +171,32 @@
             font-size: 0.9rem;
             font-weight: 500;
         }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 2rem;
+        }
+
+        @media(max-width:700px){
+            .cards {
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+            }
+        }
+
+        .card {
+            background-color: white;
+            border: 1px solid #F5F5F5;
+            padding: 1.5rem;
+        }
+
+        .card img {
+            width: 100%;
+            height: 40vw;
+            max-height: 300px;
+            margin-bottom: 1rem;
+            object-fit: cover;
+        }
     
     </style>
 </head>
@@ -216,29 +248,42 @@
             <a href="https://www.linkedin.com/in/adrianletchford/"><img src="company-logos/anu.svg" class="company" /></a>
             <a href="https://www.linkedin.com/in/adrianletchford/"><img src="company-logos/csu.svg" class="company" /></a>
         </div>
-    
+    </div>
+
+    <div class="container wide">
         <h1>Public projects</h1>
+        <div class="cards">
+        
+            <div class="card">
+                <img src="osquant.png" />
+                <h2>Open Source Quant</h2>
+                <p>
+                    I write about quantitative finance, data, and engineering at
+                    <a href="http://osquant.com">osquant.com</a>, where ~1,000 readers each month
+                    explore my articles, tools, and research. Inspired by my academic background,
+                    it's driven by a belief that rigorous, useful knowledge should be accessible
+                    without unnecessary gatekeeping.
+                </p>
+            </div>
 
-        <h2>Open Source Quant</h2>
+            <div class="card">
+                <img src="streetview.png" />
+                <h2>streetview</h2>
+                <p>
+                    I maintain an unofficial Google Street View API Python client that lets you
+                    download both current and historical panoramas — something the official API
+                    doesn't support. Built for researchers, developers, and anyone who needs more
+                    than the standard Street View offering.
+                    Available on <a href="https://pypi.org/project/streetview/">PyPI</a>
+                    and <a href="https://github.com/robolyst/streetview">GitHub</a>.
+                </p>
+            </div>
 
-        <p>
-             I write about quantitative finance, data, and engineering at
-             <a href="http://osquant.com">osquant.com</a>, where ~1,000 readers each month
-             explore my articles, tools, and research. Inspired by my academic background,
-             it's driven by a belief that rigorous, useful knowledge should be accessible
-             without unnecessary gatekeeping.
-        </p>
+        </div>
 
-        <h2>streetview</h2>
+    </div>
 
-        <p>
-            I maintain an unofficial Google Street View API Python client that lets you
-            download both current and historical panoramas — something the official API
-            doesn't support. Built for researchers, developers, and anyone who needs more
-            than the standard Street View offering.
-            Available on <a href="https://pypi.org/project/streetview/">PyPI</a>
-            and <a href="https://github.com/robolyst/streetview">GitHub</a>.
-        </p>
+    <div class="container">
 
         <h1>Selected works</h1>
 
