@@ -16,11 +16,13 @@
 
             background-color: #f9f9f9;
             font-family: "Montserrat", sans-serif;
+            font-weight: 300;
+            line-height: 1.6;
             background-color: #FBFBFB;
-            text-align: center;
             margin: 0;
             padding-left: 20px;
             padding-right: 20px;
+            text-align: justify;
         }
 
         /* Fluid base font-size scaling:
@@ -46,6 +48,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            text-align: center;
         }
 
         name {
@@ -64,11 +67,22 @@
             margin-top: 3rem;
         }
 
+        .links a {
+            display: inline-block;
+            margin: 0 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .links a:hover {
+            transform: scale(1.2);
+        }
+
         .links img {
             width: 2rem;
             height: 2rem;
-            margin: 0 0.5rem;
         }
+
+        /* Styles for main content */
 
         quote {
             font-size: 1.2rem;
@@ -79,6 +93,18 @@
             display: block;
             padding-left: 5rem;
             padding-right: 5rem;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-top: 5rem;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 2rem;
         }
     </style>
 </head>
@@ -94,7 +120,55 @@
         </div>
     </div>
     <div class="container">
-        <quote>"I solve hard problems with technology, drawing on 12+ years of experience across academia, tech startups, and finance."</quote>
+        
+        <quote>
+            "I solve hard problems with technology, drawing on 12+ years of
+            experience across academia, tech startups, and finance."
+        </quote>
+        
+        <h1>About me</h1>
+
+        <p>
+            I'm a quantitative developer and data scientist with over a decade of experience
+            solving hard problems with technology. My career has taken me from academia, to
+            technology startups, and into finance — giving me a rare mix of research depth,
+            product focus, and market experience.
+        </p>
+
+        <p>
+            I've worked across roles spanning data science, full-stack engineering, data
+            engineering, and leadership, which means I can take ideas from first principles
+            through to production systems.
+        </p>
+
+        <p>
+            Whether I'm building models, engineering data pipelines, or writing about quant
+            topics, I care about doing work that's both technically strong and human-centred.
+        </p>
+
+        <h1>Public projects</h1>
+
+        <h2>Open Source Quant</h2>
+
+        <p>
+             I write about quantitative finance, data, and engineering at
+             <a href="http://osquant.com">osquant.com</a>, where ~1,000 readers each month
+             explore my articles, tools, and research. Inspired by my academic background,
+             it's driven by a belief that rigorous, useful knowledge should be accessible
+             without unnecessary gatekeeping.
+        </p>
+
+        <h2>streetview</h2>
+
+        <p>
+            I maintain an unofficial Google Street View API Python client that lets you
+            download both current and historical panoramas — something the official API
+            doesn't support. Built for researchers, developers, and anyone who needs more
+            than the standard Street View offering.
+            Available on <a href="https://pypi.org/project/streetview/">PyPI</a>
+            and <a href="https://github.com/robolyst/streetview">GitHub</a>.
+        </p>
+
     </div>
 </body>
 
