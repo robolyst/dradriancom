@@ -22,7 +22,7 @@
             margin: 0;
             padding-left: 20px;
             padding-right: 20px;
-            text-align: justify;
+            /* text-align: justify; */
         }
 
         /* Fluid base font-size scaling:
@@ -48,7 +48,7 @@
         }
 
         .container.splash {
-            height: 80vh;
+            height: 90vh;
 
             display: flex;
             flex-direction: column;
@@ -92,14 +92,14 @@
         /* Styles for main content */
 
         quote {
-            font-size: 1.2rem;
-            font-weight: 100;
+            font-size: 1.5rem;
+            font-weight: 200;
             font-style: italic;
-            line-height: 1.5;
 
             display: block;
             padding-left: 5rem;
             padding-right: 5rem;
+            text-align: center;
         }
 
         h1 {
@@ -169,19 +169,11 @@
             font-size: 1rem;
             font-weight: 400;
             background-color: white;
-            color: #333;
+            color: #7d7d7d;
             width: 100%;
             margin-top: 4rem;
         }
 
-        tag {
-            display: inline-block;
-            background-color: #f0f0f0;
-            padding: 0.2rem 0.5rem;
-            border-radius: 0.3rem;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
 
         .cards {
             display: grid;
@@ -208,7 +200,21 @@
             margin-bottom: 1rem;
             object-fit: cover;
         }
-    
+
+        tag {
+            display: inline-block;
+            background-color: #f0f0f0;
+            padding: 0.2rem 0.5rem;
+            border-radius: 0.3rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-right: 0.5rem;
+        }
+
+        li:not(:last-child) { 
+            margin-bottom: 1.5rem;  
+        }
+            
     </style>
 </head>
 
@@ -301,8 +307,9 @@
         <ul>
             <li>
                 <tag>video</tag>
-                2016. A series of data visualisations illustrating the City of Coventry.
-                <a href="http://www.coventryindata.com">CoventryInData.com</a>
+                <a href="https://www.youtube.com/watch?v=zFdzioMr40Y">Airtasker: Meet "Carl!" The AI Classifier!</a> 2018.<br />
+                I talked to Amazon Web Services about Carl, one of the awesome machine learning tools that we built at Airtasker.
+                Carl is an algorithm that classifies the tasks posted to the Airatasker platform - named after Carl Linnaeus.
             </li>
             <li>
                 <tag>website</tag>
