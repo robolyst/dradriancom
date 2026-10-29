@@ -1,470 +1,149 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-GB">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Adrian Letchford</title>
-
-	<!-- SEO Meta Tags -->
-	<meta name="description" content="Quantitative developer and data engineer with 12+ years of experience across academia, tech startups, and finance. Expert in Python, machine learning, and financial data systems.">
-	<meta name="keywords" content="quantitative developer, data engineer, Python, machine learning, finance, data science, quant, software engineer">
-	<meta name="author" content="Adrian Letchford">
-	
-	<!-- Open Graph Meta Tags -->
-	<meta property="og:title" content="Adrian Letchford - Quantitative Developer & Data Engineer">
-	<meta property="og:description" content="Quantitative developer and data engineer with 12+ years of experience across academia, tech startups, and finance.">
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://dradrian.com">
-	<!-- <meta property="og:image" content="https://dradrian.com/og-image.jpg"> -->
-	
-	<!-- Twitter Card Meta Tags -->
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:creator" content="@DrAdrian">
-	<meta name="twitter:title" content="Adrian Letchford - Quantitative Developer & Data Engineer">
-	<meta name="twitter:description" content="Quantitative developer and data engineer with 12+ years of experience across academia, tech startups, and finance.">
-	<!-- <meta name="twitter:image" content="https://dradrian.com/og-image.jpg"> -->
-
-    <!-- Favicon -->
-	<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-
-	<style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-        body {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            background-color: #f9f9f9;
-            font-family: "Montserrat", sans-serif;
-            font-weight: 300;
-            line-height: 1.6;
-            background-color: #FBFBFB;
-            margin: 0;
-            padding-left: 20px;
-            padding-right: 20px;
-            /* text-align: justify; */
-        }
-
-        /* Fluid base font-size scaling:
-        This scales the base font-size from 12px (on very small screens)
-        up to 20px (on larger screens), with a linear interpolation in between.
-        All typography defined in rem units will scale together.
-        
-        I shamelessly stole this from benletchford.com. Hi Ben! */
-        :root {
-            font-size: clamp(12px, calc(12px + 4 * ((100vw - 320px) / 680)), 20px);
-        }
-
-        /* Container styles */
-
-        .container {
-            max-width: 800px;
-            width: 100%;
-        }
-
-        .container.wide {
-            max-width: 1200px;
-            width: 100%;
-        }
-
-        .container.splash {
-            height: 90vh;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        /* Splash styles */
-        name {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        job {
-            font-size: 1.5rem;
-            font-weight: 200;
-            margin-bottom: 1.5rem;
-        }
-
-        .links {
-            margin-top: 3rem;
-        }
-
-        .links a {
-            display: inline-block;
-            margin: 0 0.5rem;
-            transition: transform 0.3s ease;
-        }
-
-        .links a:hover {
-            transform: scale(1.2);
-        }
-
-        .links img {
-            width: 2rem;
-            height: 2rem;
-        }
-
-        /* Styles for main content */
-
-        quote {
-            font-size: 1.5rem;
-            font-weight: 200;
-            font-style: italic;
-
-            display: block;
-            padding-left: 5rem;
-            padding-right: 5rem;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-top: 6rem;
-            text-align: center;
-        }
-
-        h2 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-top: 1rem;
-        }
-
-        img.company {
-            max-height: 50px;
-            max-width: 200px;
-
-            -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-            filter: grayscale(100%);
-        }
-
-        img.company:hover {
-            -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
-            filter: grayscale(0%);
-        }
-
-        .companies {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            justify-items: center;
-            align-items: center;
-            grid-gap: 3rem;
-            margin-top: 3rem;
-        }
-
-        @media(max-width:700px){
-            .companies {
-                grid-template-columns: repeat(2, 1fr);
-                grid-gap: 4rem 2rem;
-            }
-        }
-
-        @media(max-width:500px){
-            .companies {
-                grid-template-columns: repeat(1, 1fr);
-                grid-gap: 4rem 2rem;
-            }
-        }
-
-        .companies a img {
-            transition: transform 0.3s ease;
-        }
-
-        .companies a img:hover {
-            transform: scale(1.2);
-        }
-
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .footer {
-            /* height: 20vh; */
-
-            text-align: center;
-
-            font-size: 1rem;
-            font-weight: 400;
-            background-color: white;
-            color: #7d7d7d;
-            width: 100%;
-            margin-top: 4rem;
-        }
-
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-gap: 2rem;
-        }
-
-        @media(max-width:700px){
-            .cards {
-                grid-template-columns: repeat(1, minmax(0, 1fr));
-            }
-        }
-
-        .card {
-            background-color: white;
-            border: 1px solid #F5F5F5;
-            padding: 1.5rem;
-        }
-
-        .card img {
-            width: 100%;
-            height: 40vw;
-            max-height: 300px;
-            margin-bottom: 1rem;
-            object-fit: cover;
-        }
-
-        tag {
-            display: inline-block;
-            background-color: #f0f0f0;
-            padding: 0.2rem 0.5rem;
-            border-radius: 0.3rem;
-            font-size: 0.9rem;
-            font-weight: 500;
-            margin-right: 0.5rem;
-        }
-
-        li:not(:last-child) { 
-            margin-bottom: 1.5rem;  
-        }
-
-        .media_links a {
-            display: inline-block;
-            margin-right: 2rem;
-            margin-bottom: 2rem;
-            opacity: 0.5;
-            transition: transform 0.3s ease;
-        }
-
-        .media_links a img {
-            max-height: 2rem;
-        }
-
-        .media_links a:hover {
-            opacity: 1;
-            transform: scale(1.2);
-        }
-            
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adrian Letchford | Senior Quantitative Developer, London</title>
+  <meta name="description" content="Senior quantitative developer focused on front-office systematic trading. Quantitative research, production engineering and technical ownership. London.">
+  <meta name="theme-color" content="#192c3a">
+  <link rel="canonical" href="https://dradrian.com/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Adrian Letchford — Senior Quantitative Developer">
+  <meta property="og:description" content="I turn quantitative research into production trading systems. Front-office systematic trading · London.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dradrian.com/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:creator" content="@DrAdrian">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <div class="container splash">
-        <name>Adrian Letchford</name>
-        <job>Quantitative Developer & Data Engineer</job>
-        <div class="links">
-            <a href="https://x.com/DrAdrian" target="_blank" rel="noopener"><img src="x.svg" /></a>
-            <a href="https://www.linkedin.com/in/adrianletchford/" target="_blank" rel="noopener"><img src="linkedin.svg" /></a>
-            <a href="https://github.com/robolyst" target="_blank" rel="noopener"><img src="github.svg" /></a>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="#" aria-label="dradrian.com, home">dradrian.com</a>
+    <nav aria-label="Main navigation">
+      <a href="#experience">Experience</a>
+      <a href="#writing">Writing</a>
+      <a href="#open-source">Open source</a>
+      <a class="nav-contact" href="#contact">Contact</a>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="identity">
+        <p class="role-label">Senior Quantitative Developer<br>Front-Office Systematic Trading</p>
+        <h1 id="hero-title">Adrian<br>Letchford<span>.</span></h1>
+        <p class="place">London, UK</p>
+        <div class="personal-links">
+          <a href="mailto:me@dradrian.com">Email</a>
+          <a href="https://www.linkedin.com/in/adrianletchford/">LinkedIn</a>
+          <a href="https://github.com/robolyst">GitHub</a>
         </div>
-    </div>
-    <div class="container">
-        
-        <quote>
-            "I solve hard problems with technology, drawing on 12+ years of
-            experience across academia, tech startups, and finance."
-        </quote>
-        
-        <h1>About me</h1>
-
-        <p>
-            I'm a quantitative developer and data scientist with over a decade of experience
-            solving hard problems with technology. My career has taken me from academia, to
-            technology startups, and into finance - giving me a rare mix of research depth,
-            product focus, and market experience.
-        </p>
-
-        <p>
-            I've worked across roles spanning data science, full-stack engineering, data
-            engineering, and leadership, which means I can take ideas from first principles
-            through to production systems.
-        </p>
-
-        <p>
-            Whether I'm building models, engineering data pipelines, or writing about quant
-            topics, I care about doing work that's both technically strong and human-centred.
-        </p>
-
-        <div class="companies">
-            <a href="https://www.linkedin.com/in/adrianletchford/"><img src="company-logos/millennium.svg" class="company" /></a>
-            <a href="https://www.linkedin.com/in/adrianletchford/"><img src="company-logos/lick.svg"  style="max-height: 30px;" class="company" /></a>
-            <a href="https://www.linkedin.com/in/adrianletchford/"><img src="company-logos/akuna.png" style="max-height: 100px;" class="company" /></a>
-            <a href="https://www.linkedin.com/in/adrianletchford/"><img src="company-logos/airtasker.svg" class="company" /></a>
-            <a href="https://www.linkedin.com/in/adrianletchford/"><img src="company-logos/mathspace.svg" class="company" /></a>
-            <a href="https://www.linkedin.com/in/adrianletchford/"><img src="company-logos/usyd.svg" class="company" /></a>
-            <a href="https://www.linkedin.com/in/adrianletchford/"><img src="company-logos/wbs.svg" class="company" /></a>
-            <a href="https://www.linkedin.com/in/adrianletchford/"><img src="company-logos/anu.svg" class="company" /></a>
-            <a href="https://www.linkedin.com/in/adrianletchford/"><img src="company-logos/csu.svg" class="company" /></a>
+      </div>
+      <div class="introduction">
+        <h2>I turn quantitative research into production trading systems.</h2>
+        <p>I work across the research and engineering behind systematic trading: understanding the model, building the software and taking responsibility for it in production.</p>
+        <p>My background spans hedge funds, market making, leading a data team and academic research. Alongside my work in industry, I publish at <a href="https://osquant.com/">OSQuant</a> and build open-source Python tools.</p>
+        <p class="opportunity">I’m interested in senior front-office roles at hedge funds and systematic investment firms in London. <a href="mailto:me@dradrian.com">Get in touch.</a></p>
+      </div>
+    </section>
+    <section id="experience" class="wrap section-grid section-space" aria-labelledby="experience-title">
+      <div class="section-aside">
+        <h2 id="experience-title">Experience</h2>
+        <p>Trading, data and engineering.</p>
+        <a class="text-link" href="https://www.linkedin.com/in/adrianletchford/">Full background on LinkedIn ↗</a>
+      </div>
+      <div class="career">
+        <article class="career-row">
+          <div class="career-heading"><h3>BlueCrest</h3><span>Front-office trading</span></div>
+          <p>Quantitative development within a front-office trading team, building systematic trading systems.</p>
+        </article>
+        <article class="career-row">
+          <div class="career-heading"><h3>Millennium</h3><span>Quantitative Developer</span></div>
+          <p>Engineering for systematic equities and options strategies, spanning data pipelines and production trading workflows.</p>
+        </article>
+        <article class="career-row">
+          <div class="career-heading"><h3>Akuna Capital</h3><span>Quantitative Developer</span></div>
+          <p>Development for index arbitrage, trading-system monitoring and improvements to engineering workflows. Mentoring junior engineers.</p>
+        </article>
+        <article class="career-row">
+          <div class="career-heading"><h3>Lick</h3><span>Head of Data</span></div>
+          <p>Led the data function across analytics, data engineering and machine learning, connecting technical delivery with company strategy.</p>
+        </article>
+        <article class="career-row">
+          <div class="career-heading"><h3>Airtasker</h3><span>Data science &amp; machine learning</span></div>
+          <p>Built marketplace machine learning and data systems, including recommendations, moderation and task classification.</p>
+        </article>
+      </div>
+    </section>
+    <section id="writing" class="writing" aria-labelledby="writing-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <h2 id="writing-title">Writing</h2>
+          <a class="text-link" href="https://osquant.com/">All articles at OSQuant ↗</a>
         </div>
-    </div>
-
-    <div class="container wide">
-        <h1>Active projects</h1>
-        <div class="cards">
-        
-            <div class="card">
-                <img src="osquant.png" />
-                <h2>Open Source Quant</h2>
-                <p>
-                    I write about quantitative finance, data, and engineering at
-                    <a href="http://osquant.com">osquant.com</a>, where ~1,000 readers each month
-                    explore my articles, tools, and research. Inspired by my academic background,
-                    it's driven by a belief that rigorous, useful knowledge should be accessible
-                    without unnecessary gatekeeping.
-                </p>
-            </div>
-
-            <div class="card">
-                <img src="streetview.png" />
-                <h2>streetview</h2>
-                <p>
-                    I maintain an unofficial Google Street View API Python client that lets you
-                    download both current and historical panoramas — something the official API
-                    doesn't support. Built for researchers, developers, and anyone who needs more
-                    than the standard Street View offering.
-                    Available on <a href="https://pypi.org/project/streetview/">PyPI</a>
-                    and <a href="https://github.com/robolyst/streetview">GitHub</a>.
-                </p>
-            </div>
-
-            <div class="card">
-                <img src="recx.png" />
-                <h2>recx</h2>
-                <p>
-                    I created a Python library to make my own data pipelines more robust. The
-                    library "recx" performs reconciliation tests on DataFrames. This means you
-                    can be sure that refreshes to your data hasn't created unknown changes to
-                    the data.
-                    Available on <a href="https://pypi.org/project/recx/">PyPI</a>
-                    and <a href="https://github.com/robolyst/recx">GitHub</a>.
-                </p>
-            </div>
-
+        <p class="section-intro">Selected pieces from OSQuant. Mathematics, implementation and the things that matter when a model leaves the notebook.</p>
+        <div class="featured-writing">
+          <div class="article-list">
+            <a href="https://osquant.com/papers/2025/statistical-factor-modelling/">
+              <span class="article-meta">December 2025<br>29 min read</span>
+              <h3>Statistical Factor Modeling <span aria-hidden="true">↗</span></h3>
+              <p>Latent factors, rotations and the challenge of keeping a statistical model stable in practical use.</p>
+            </a>
+            <a href="https://osquant.com/papers/conditional-value-at-risk/">
+              <span class="article-meta">September 2025</span>
+              <h3>Conditional Value at Risk <span aria-hidden="true">↗</span></h3>
+              <p>From estimating tail risk to portfolio optimisation, with working code.</p>
+            </a>
+            <a href="https://osquant.com/papers/a-quants-guide-to-covariance-matrix-estimation/">
+              <span class="article-meta">August 2025</span>
+              <h3>A Quant’s Guide to Covariance Matrix Estimation <span aria-hidden="true">↗</span></h3>
+              <p>Evaluation, variance and correlation, and shrinkage.</p>
+            </a>
+            <a href="https://osquant.com/papers/monitoring-trading-systems/">
+              <span class="article-meta">May 2023</span>
+              <h3>Monitoring Trading Systems <span aria-hidden="true">↗</span></h3>
+              <p>Turning trading logs into useful operational visibility.</p>
+            </a>
+          </div>
         </div>
-
-    </div>
-
-    <div class="container">
-
-        <h1>Selected works</h1>
-
-        <ul>
-            <li>
-                <tag>software</tag>
-                <a href="https://github.com/robolyst/ibportal">ibportal</a> (2022) A Dockerized version of Interactive
-                Brokers' REST API Web Gateway.
-            </li>
-            <li>
-                <tag>video</tag>
-                <a href="https://www.youtube.com/watch?v=zFdzioMr40Y">Airtasker: Meet "Carl!" The AI Classifier!</a> 2018.<br />
-                I talked to Amazon Web Services about Carl, one of the awesome machine learning tools that we built at Airtasker.
-                Carl is an algorithm that classifies the tasks posted to the Airatasker platform - named after Carl Linnaeus.
-            </li>
-            <li>
-                <tag>website</tag>
-                <a href="http://www.coventryindata.com">CoventryInData.com</a> 2016. A series of data visualisations
-                illustrating the City of Coventry.
-            </li>
-            <li>
-                <tag>paper</tag>
-                Adrian Letchford, Tobias Preis and Helen Susannah Moat. 2016
-                <a href="https://doi.org/10.1371/journal.pone.0149025">Quantifying the Search Behaviour of Different Demographics Using Google Correlate.</a>
-                <i>PLoS ONE</i> <b>11</b> (2): e0149025.
-            </li>
-            <li>
-                <tag>paper</tag>
-                Adrian Letchford, Tobias Preis and Helen Susanna Moat. 2016.
-                <a href="https://doi.org/10.1016/j.joi.2015.11.001">The advantage of simple paper abstracts.</a>
-                <i>Journal of Informetrics</i> <b>2</b> (1). pp. 1-8.
-            </li>
-            <li>
-                <tag>course</tag>
-                Robot Races. 2015. I taught a crash course on programming and robotics with Lego robots. Classes were
-                held at the University of Warwick and aimed for school years 6+. At the end, the kids race their robots
-                against the clock through an obstical course using a combination of light and ultrasonic sensors.
-            </li>
-    
-            <li>
-                <tag>show</tag>
-                Claire Rocks and Adrian Letchford. The University of Warwick 2015 Christmas Lecture on Robotics. <br />
-                <i>I co-hosted a 2015 Christmas Lecture at the University of Warwick. The show was about robotics, and
-                all the different parts that make a functioning robot, as well as the roles these robots now play in
-                society.</i>
-            </li>
-           <li>
-                <tag>paper</tag>
-                Christian M. Alis, Adrian Letchford, Helen Susannah Moat and Tobias Preis. 2015.
-                <a href="https://doi.org/10.1098/rsos.150266">Estimating tourism statistics with Wikipedia page views.</a>
-                <i>Proceedings of the ACM Web Science Conference</i> Article No.: 33. pp. 1-2.
-            </li>
-            <li>
-                <tag>paper</tag>
-                Adrian Letchford, Helen Susanna Moat and Tobias Preis. 2015.
-                <a href="https://doi.org/10.1098/rsos.150266">The advantage of short paper titles.</a>
-                <i>Royal Society Open Science</i> <b>10:</b> 2150266.
-                <p>The paper was written about by:</p>
-                <div class="media_links">
-                    <a href="http://news.sciencemag.org/scientific-community/2015/08/brief-papers-shorter-titles-get-more-citations-study-suggests" target="_blank"><img src="company-logos/science.png"></a>
-                    <a href="http://www.nature.com/news/papers-with-shorter-titles-get-more-citations-1.18246" target="_blank"><img src="company-logos/nature.png"></a>
-                    <a href="http://www.thetimes.co.uk/tto/science/article4548298.ece" target="_blank"><img src="company-logos/the_times.png"></a>
-                    <a href="http://www.dailymail.co.uk/news/article-3223513/Is-science-hard-scientists-Experts-worry-academic-papers-unintelligible-NO-ONE-read-them.html" target="_blank"><img src="company-logos/daily_mail.png"></a>
-                    <a href="http://www.scientificamerican.com/podcast/episode/terse-titles-cited/" target="_blank"><img src="company-logos/scientific_american.png"></a>
-                </div>
-            </li>
-            <li>
-               <tag>paper</tag>
-                Adrian Letchford, Junbin Gao, and Lihong Zheng. 2014.
-                <a href="https://doi.org/10.1109/ICPR.2014.188">Smoothing Security Prices.</a>
-                <i>22nd International Conference on Pattern Recognition.</i> pp. 1037-1042.
-            </li>
-            <li>
-                <tag>paper</tag>
-                Adrian Letchford, Junbin Gao, and Lihong Zheng. 2013.
-                <a href="https://doi.org/10.1007/s13042-012-0081-0">Filtering financial time series by least squares.</a>
-                <i>Int. J. Mach. Learn. & Cyber.</i> <b>4</b>. pp. 149-154.
-            </li>
-            <li>
-                <tag>paper</tag>
-                Adrian Letchford, Junbin Gao and Lihong Zheng. 2012.
-                <a href="https://doi.org/10.1109/IJCNN.2012.6252797">Optimizing the moving averages.</a>
-                <i>The 2012 International Joint Conference on Neural Networks (IJCNN).</i>
-            </li>
-            <li>
-                <tag>paper</tag>
-                Adrian Letchford, Junbin Gao and Lihong Zheng. 2011.
-                <a href="https://doi.org/10.1007/978-3-642-25832-9_8">Penalized least squares for smoothing financial time series.</a>
-                <i>AI 2011: Advances in Artificial Intelligence.</i> <b>7106.</b>
-            </li>
-        </ul>
-
-    </div>
-
-    <div class="footer">
-        <p>
-            Reach out to me on
-            <a href="https://x.com/DrAdrian" target="_blank" rel="noopener">X<a>,
-             <a href="https://www.linkedin.com/in/adrianletchford/" target="_blank" rel="noopener">LinkedIn</a>,
-             or  <a href="mailto:me@dradrian.com" target="_blank" rel="noopener">email</a>.
-        </p>
-    </div>
+      </div>
+    </section>
+    <section id="open-source" class="wrap section-space" aria-labelledby="source-title">
+      <div class="section-heading"><h2 id="source-title">Open source</h2></div>
+      <div class="projects">
+        <article>
+          <div class="project-top"><h3>recx</h3><span class="label">Data reconciliation</span></div>
+          <p>Reconciliation tests for pandas DataFrames. A small library for checking that changes to data pipelines produce the changes you expect, with explicit tolerances.</p>
+          <div class="project-links"><a href="https://github.com/robolyst/recx">Source code ↗</a><a href="https://pypi.org/project/recx/">PyPI ↗</a></div>
+        </article>
+        <article>
+          <div class="project-top"><h3>streetview</h3><span class="label">Data access</span></div>
+          <p>An unofficial Google Street View Python client for accessing and downloading panoramas, including historical imagery.</p>
+          <div class="project-links"><a href="https://github.com/robolyst/streetview">Source code ↗</a><a href="https://pypi.org/project/streetview/">PyPI ↗</a></div>
+        </article>
+      </div>
+      <details class="research">
+        <summary><strong>Earlier research &amp; publications</strong><span class="expand" aria-hidden="true">+</span></summary>
+        <div class="research-body">
+          <p>Before industry, I worked in academic research on machine learning, financial time series and online behaviour. Selected peer-reviewed work:</p>
+          <ul>
+            <li><a href="https://doi.org/10.1007/s13042-012-0081-0">Filtering financial time series by least squares ↗</a><span>International Journal of Machine Learning and Cybernetics · 2013</span></li>
+            <li><a href="https://doi.org/10.1109/ICPR.2014.188">Smoothing Security Prices ↗</a><span>International Conference on Pattern Recognition · 2014</span></li>
+            <li><a href="https://doi.org/10.1371/journal.pone.0149025">Quantifying the Search Behaviour of Different Demographics Using Google Correlate ↗</a><span>PLoS ONE · 2016</span></li>
+          </ul>
+        </div>
+      </details>
+    </section>
+    <section id="contact" class="contact" aria-labelledby="contact-title">
+      <div class="wrap contact-grid">
+        <div><h2 id="contact-title">Contact</h2><p>For senior quantitative development opportunities in London, email me or connect on LinkedIn.</p></div>
+        <div class="contact-links">
+          <a class="email" href="mailto:me@dradrian.com">me@dradrian.com <span aria-hidden="true">↗</span></a>
+          <a href="https://www.linkedin.com/in/adrianletchford/">Connect on LinkedIn ↗</a>
+        </div>
+      </div>
+      <footer class="wrap"><span>© 2026 Adrian Letchford</span><a href="#">Back to top ↑</a></footer>
+    </section>
+  </main>
 </body>
-
 </html>
