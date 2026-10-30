@@ -38,3 +38,7 @@ Keyboard focus, skip navigation, labelled landmarks, semantic headings and nativ
 ## Revision following visual feedback
 
 The first direction leaned too heavily on a generic portfolio vocabulary: numbered sections, three matching capability columns, repeated promotional headlines and a decorative factor-model graphic. Following feedback, these were removed. The final direction uses an asymmetric personal introduction, employer responsibilities, a dated reading list and compact project descriptions. Copper is limited to small details and links; there are no coloured section bands or promotional closing slogans.
+
+## Blue palette and restored graphic content
+
+Applied the approved ink/mineral/cobalt palette, with porcelain backgrounds and slate secondary text. Restored accessible social links using existing GitHub, LinkedIn and X vector assets, plus an email icon. Employer logos are retained alongside role context; BlueCrest remains text because no verified logo is present in the repository. recx and streetview retain their original project graphics and colours. The export script now includes these assets.
