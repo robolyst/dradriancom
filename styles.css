@@ -14,7 +14,7 @@ a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outli
 p { margin: 0 0 20px; }
 h1, h2, h3 { margin: 0; font-weight: normal; }
 .wrap { max-width: 1180px; padding: 0 50px; margin: 0 auto; }
-.site-header { min-height: 94px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--rule); }
+.site-header { min-height: 94px; display: flex; align-items: center; justify-content: space-between; }
 .wordmark { font: italic 18px Georgia, serif; }
 nav { display: flex; gap: 29px; font-size: 12px; }
 .nav-contact { color: var(--accent); }
@@ -25,38 +25,38 @@ h1 { font: 78px/.97 Georgia, 'Times New Roman', serif; letter-spacing: -4px; }
 h1 span { color: var(--accent); }
 .place { font-size: 13px; margin: 25px 0 14px; color: var(--quiet); }
 .personal-links { display: flex; gap: 23px; font-size: 12px; }
-.personal-links a { border-bottom: 1px solid var(--rule); }
+.personal-links a { }
 .introduction { padding-top: 0; }
 .introduction h2 { font: 40px/1.22 Georgia, serif; letter-spacing: -1px; max-width: 650px; margin-bottom: 27px; }
 .introduction p { font-size: 15px; color: var(--quiet); max-width: 625px; }
 .introduction a, .research-body a { color: var(--ink); text-decoration: underline; text-decoration-color: #294D70; text-underline-offset: 4px; }
 .introduction .opportunity { font-size: 13px; border-left: 1px solid var(--accent); padding-left: 17px; margin-top: 27px; }
 .section-grid { display: grid; grid-template-columns: 350px 1fr; gap: 65px; }
-.section-space { padding-top: 46px; padding-bottom: 56px; }
-#experience { border-top: 1px solid var(--rule); }
+.section-space { padding-top: 64px; padding-bottom: 72px; }
 .section-aside h2, .section-heading h2, .contact h2 { font: 27px/1.3 Georgia, serif; letter-spacing: -.5px; }
 .section-aside p { font-size: 13px; color: var(--quiet); margin: 11px 0 20px; }
 .text-link { font-size: 11px; color: var(--quiet); }
 .text-link span { margin-left: 8px; }
-.career-row { display: grid; grid-template-columns: 145px 1fr; gap: 20px; border-top: 1px solid var(--rule); padding: 19px 0 22px; }
-.career-row:first-child { border-top: 0; padding-top: 0; }
+.career-row { display: grid; grid-template-columns: 145px 1fr; gap: 20px; padding: 24px 0; }
+.career-row:first-child { padding-top: 0; }
+.career-row:last-child { padding-bottom: 0; }
 .career-heading h3 { font: 22px/1.3 Georgia, serif; margin-bottom: 7px; }
 .career-heading>span { display: block; font-size: 10px; line-height: 1.5; color: var(--quiet); }
 .career-row p { font-size: 13px; color: var(--quiet); margin: 0; line-height: 1.75; }
 .writing { margin: 0 auto; max-width: 1180px; padding: 0 50px; }
-.writing>.wrap { border-top: 1px solid var(--rule); padding: 43px 0 45px; display: grid; grid-template-columns: 350px 1fr; column-gap: 65px; }
+.writing>.wrap { padding: 64px 0 72px; display: grid; grid-template-columns: 350px 1fr; column-gap: 65px; }
 .section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 25px; }
 .writing .section-heading { grid-column: 1; display: block; }
 .writing .section-heading .text-link { display: inline-block; margin-top: 15px; }
 .section-intro { grid-column: 1; grid-row: 2; font-size: 13px; color: var(--quiet); max-width: 240px; margin-top: 16px; }
 .featured-writing { grid-column: 2; grid-row: 1 / span 3; }
-.article-list a { display: grid; grid-template-columns: 1fr 110px; border-top: 1px solid var(--rule); padding: 21px 0; column-gap: 20px; }
-.article-list a:first-child { border-top: 0; padding-top: 0; }
+.article-list a { display: grid; grid-template-columns: 1fr 110px; padding: 25px 0; column-gap: 20px; }
+.article-list a:first-child { padding-top: 0; }
+.article-list a:last-child { padding-bottom: 0; }
 .article-meta { grid-column: 2; grid-row: 1; font-size: 10px; color: var(--quiet); text-align: right; line-height: 1.6; padding-top: 4px; }
 .article-list h3 { grid-column: 1; grid-row: 1; font: 22px/1.3 Georgia, serif; }
 .article-list h3 span { font: 14px Arial, sans-serif; color: var(--accent); margin-left: 7px; }
 .article-list p { grid-column: 1 / span 2; font-size: 13px; color: var(--quiet); margin: 9px 0 0; max-width: 490px; }
-#open-source { border-top: 1px solid var(--rule); }
 .projects { display: grid; grid-template-columns: 1fr 1fr; gap: 55px; padding-left: 415px; margin-top: -35px; }
 .projects article { min-width: 0; }
 .project-top h3 { font: italic 28px Georgia, serif; margin-bottom: 8px; }
@@ -64,7 +64,7 @@ h1 span { color: var(--accent); }
 .projects p { color: var(--quiet); font-size: 13px; line-height: 1.75; margin: 17px 0; }
 .project-links { display: flex; gap: 20px; font-size: 11px; }
 .project-links a { text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 4px; }
-.research { border-top: 1px solid var(--rule); margin-top: 44px; margin-left: 415px; }
+.research { margin-top: 44px; margin-left: 415px; }
 .research summary { list-style: none; display: flex; justify-content: space-between; padding: 20px 0 0; cursor: pointer; }
 .research summary::-webkit-details-marker { display: none; }
 .research strong { font-weight: normal; font-size: 12px; }
@@ -75,12 +75,12 @@ details[open] .expand { transform: rotate(45deg); }
 .research li { margin: 15px 0; }
 .research li span { display: block; font-size: 11px; margin-top: 5px; }
 .contact { padding: 0 50px; max-width: 1180px; margin: 0 auto; }
-.contact-grid { display: grid; grid-template-columns: 350px 1fr; gap: 65px; padding: 36px 0 45px; border-top: 1px solid var(--rule); }
+.contact-grid { display: grid; grid-template-columns: 350px 1fr; gap: 65px; padding: 56px 0 45px; }
 .contact-grid>div:first-child p { font-size: 13px; color: var(--quiet); margin: 15px 0 0; max-width: 270px; }
 .contact-links { display: flex; flex-direction: column; align-items: flex-start; gap: 9px; padding-top: 4px; font-size: 12px; }
 .email { font: 27px Georgia, serif; margin-bottom: 9px; }
 .email span { font: 17px Arial, sans-serif; margin-left: 24px; color: var(--accent); }
-footer { display: flex; justify-content: space-between; border-top: 1px solid var(--rule); padding: 20px 0!important; color: var(--quiet); font-size: 10px; }
+footer { display: flex; justify-content: space-between; padding: 28px 0!important; color: var(--quiet); font-size: 10px; }
 .skip { position: absolute; left: 20px; top: -100px; background: var(--ink); color: white; padding: 10px; z-index: 3; }
 .skip:focus { top: 10px; }
 @media(max-width:1050px) {
@@ -112,14 +112,14 @@ footer { display: flex; justify-content: space-between; border-top: 1px solid va
   .introduction p { font-size: 14px; }
   .introduction .opportunity { font-size: 12px; margin-top: 23px; }
   .section-grid { display: block; }
-  .section-space { padding-top: 31px; padding-bottom: 35px; }
+  .section-space { padding-top: 44px; padding-bottom: 44px; }
   .section-aside { margin-bottom: 30px; }
   .section-aside p { margin: 9px 0; }
   .career-row { grid-template-columns: 115px 1fr; gap: 15px; }
   .career-heading h3 { font-size: 21px; }
   .career-row p { font-size: 12px; }
   .writing, .contact { padding: 0 24px; }
-  .writing>.wrap { display: block; padding: 30px 0; }
+  .writing>.wrap { display: block; padding: 44px 0; }
   .writing .section-heading { display: flex; }
   .writing .section-heading .text-link { margin: 0; }
   .section-intro { max-width: 100%; margin: 16px 0 25px; }
@@ -128,11 +128,11 @@ footer { display: flex; justify-content: space-between; border-top: 1px solid va
   .article-meta { font-size: 9px; }
   .article-list p { font-size: 12px; }
   .projects { padding-left: 0; margin-top: 27px; grid-template-columns: 1fr; gap: 30px; }
-  .projects article { border-top: 1px solid var(--rule); padding-top: 20px; }
+  .projects article { padding-top: 0; }
   .project-top { display: flex; justify-content: space-between; align-items: baseline; }
   .projects p { margin: 12px 0; }
   .research { margin-left: 0; margin-top: 30px; }
-  .contact-grid { display: block; padding: 30px 0; }
+  .contact-grid { display: block; padding: 44px 0; }
   .contact-grid>div:first-child p { max-width: 340px; }
   .contact-links { margin-top: 26px; }
   .email { font-size: 26px; }

@@ -42,3 +42,8 @@ The first direction leaned too heavily on a generic portfolio vocabulary: number
 ## Blue palette and restored graphic content
 
 Applied the approved ink/mineral/cobalt palette, with porcelain backgrounds and slate secondary text. Restored accessible social links using existing GitHub, LinkedIn and X vector assets, plus an email icon. Employer logos are retained alongside role context; BlueCrest remains text because no verified logo is present in the repository. recx and streetview retain their original project graphics and colours. The export script now includes these assets.
+
+
+## Separation through spacing
+
+Removed horizontal rules from the masthead, main sections, experience and article rows, project entries, publication disclosure and footer. Increased section spacing and row breathing room, with smaller spacing on mobile. Link underlines and the small vertical opportunity accent remain functional/local details.
